@@ -1,0 +1,3 @@
+displayName = Biden's Terraria
+author = ScalarVector
+version = 0.1
