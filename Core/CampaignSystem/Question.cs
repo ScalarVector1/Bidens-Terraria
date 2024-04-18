@@ -6,12 +6,29 @@ using System.Threading.Tasks;
 
 namespace BidenMod.Core.CampaignSystem
 {
-	internal class CampaignSystem : ModSystem
+	internal class Question
 	{
+		string question;
+
+		public Answer[] answers = new Answer[4];
+
+		public Question(string question)
+		{
+			this.question = question;
+		}
+	}
+
+	internal class Answer
+	{
+		public string answer;
+
 		public Dictionary<string, float> scores = new();
 
-		public int questionTimer;
-		public Question activeQuestion;
+		public Answer(string answer)
+		{
+			this.answer = answer;
+			Reset();
+		}
 
 		public void Reset()
 		{
@@ -22,12 +39,6 @@ namespace BidenMod.Core.CampaignSystem
 			scores.Add("IndividualVsIdeal", 0);
 			scores.Add("DeontologyVsUtilitarianism", 0);
 			scores.Add("GeneralAppeal", 0);
-		}
-
-		public void AskQuestion(Question question)
-		{
-			activeQuestion = question;
-			//TODO: Activate UI?
 		}
 	}
 }

@@ -8,7 +8,7 @@ namespace BidenMod.Core.CampaignSystem
 {
 	internal class Voter : GlobalNPC
 	{
-		public Dictionary<string, float> scores = new();
+		public Dictionary<string, float> beliefs = new();
 
 		public override bool InstancePerEntity => true;
 
@@ -19,13 +19,13 @@ namespace BidenMod.Core.CampaignSystem
 
 		public void Reset()
 		{
-			scores.Clear();
-			scores.Add("ServicesVsTaxes", 0);
-			scores.Add("FreedomVsSafety", 0);
-			scores.Add("WealthVsGrowth", 0);
-			scores.Add("IndividualVsIdeal", 0);
-			scores.Add("DeontologyVsUtilitarianism", 0);
-			scores.Add("GeneralAppeal", 0);
+			beliefs.Clear();
+			beliefs.Add("ServicesVsTaxes", 0);
+			beliefs.Add("FreedomVsSafety", 0);
+			beliefs.Add("WealthVsGrowth", 0);
+			beliefs.Add("IndividualVsIdeal", 0);
+			beliefs.Add("DeontologyVsUtilitarianism", 0);
+			beliefs.Add("GeneralAppeal", 0);
 		}
 	}
 }
