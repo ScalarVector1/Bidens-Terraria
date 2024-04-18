@@ -20,6 +20,11 @@ namespace BidenMod.Core.Systems.PlayableCharacterSystem
 		public virtual string Name => "Unnamed character";
 
 		/// <summary>
+		/// If vanilla rendering should be hidden or not
+		/// </summary>
+		public virtual bool HideVanilla => false;
+
+		/// <summary>
 		/// Called when the player instance for this character is initialized. Allows you to do things like
 		/// set specific modded data like abillities
 		/// </summary>

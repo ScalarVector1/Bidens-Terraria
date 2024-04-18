@@ -1,3 +1,4 @@
+using BidenMod.Content.Characters;
 using BidenMod.Core.Loaders.UILoading;
 using ReLogic.Graphics;
 using System.Collections.Generic;
@@ -49,6 +50,9 @@ namespace BidenMod.Content.GUI
 		public static void Advance()
 		{
 			state++;
+
+			if (state >= MAX_STATE)
+				Main.LocalPlayer.GetModPlayer<BidenTracker>().isBidenUnlocked = true;
 		}
 
 		public override void SafeUpdate(GameTime gameTime)

@@ -15,6 +15,14 @@ namespace BidenMod.Content.Items
 
 		public override bool? UseItem(Player player)
 		{
+			Main.NewText(player.hair);
+			Main.NewText(player.hairColor);
+			Main.NewText(player.skinColor);
+			Main.NewText(player.eyeColor);
+			Main.NewText(player.shirtColor);
+			Main.NewText(player.shoeColor);
+			Main.NewText(player.skinVariant);
+
 			UnlockGui.Display();
 			return true;
 		}

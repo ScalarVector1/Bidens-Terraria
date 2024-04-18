@@ -144,7 +144,7 @@ namespace BidenMod.Core.Systems.PlayableCharacterSystem
 
 		public override void HideDrawLayers(PlayerDrawSet drawInfo)
 		{
-			if (ValidAlt)
+			if (ValidAlt && playingAs.HideVanilla)
 			{
 				foreach (PlayerDrawLayer layer in PlayerDrawLayerLoader.Layers)
 				{
