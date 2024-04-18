@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wAUE5YGWd2z6Z75aqjYPqxiyAetjA+febdeCdsYsF/lMUPT2QPsq6kcHloBmxxXXZoVxIuRIIyoC7UhYKWNLRA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alexw\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\BidenMod\\BidenMod.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexw\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
