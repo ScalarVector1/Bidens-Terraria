@@ -20,11 +20,19 @@ namespace BidenMod.Content.Characters
 			player.skinVariant = 3;
 
 			player.name = "Joe Biden";
+
+			player.GetModPlayer<BidenTracker>().isBidenUnlocked = true;
 		}
 
 		public override void PreUpdate()
 		{
 			player.statManaMax2 = 0;
+
+			player.accRunSpeed += 0.8f;
+			player.maxRunSpeed += 0.8f;
+
+			if (player.jump > 6)
+				player.jump = 6;
 		}
 	}
 }

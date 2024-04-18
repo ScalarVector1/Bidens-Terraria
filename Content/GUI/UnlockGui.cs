@@ -9,14 +9,14 @@ namespace BidenMod.Content.GUI
 {
 	public class UnlockGui : SmartUIState
 	{
-		public const int MAX_STATE = 1;
+		public const int MAX_STATE = 2;
 
 		public static bool visible;
 		public static int fade = 0;
 		public static int state = 0;
 
-		string imagePath = "BidenMod/Assets/GUI/Biden1";
-		string message = "You've unlocked 46th US President Joe Biden as a playable character! Press 'K' to switch between Joe and your main character. Joe has is own equipment, life, and inventory seperate from you.";
+		public static string imagePath = "BidenMod/Assets/GUI/Biden1";
+		public static string message = "You've unlocked 46th US President Joe Biden as a playable character! Press 'K' to switch between Joe and your main character. Joe has is own equipment, life, and inventory seperate from you.";
 
 		UnlockButton button;
 
@@ -42,14 +42,22 @@ namespace BidenMod.Content.GUI
 			state = 0;
 			fade = 0;
 
-			// debug
-			UILoader.GetUIState<UnlockGui>().RemoveAllChildren();
-			UILoader.GetUIState<UnlockGui>().OnInitialize();
+			imagePath = "BidenMod/Assets/GUI/Biden1";
+			message = "You've unlocked 46th US President Joe Biden as a playable character! Press 'K' to switch between Joe and your main character. Joe has is own equipment, life, and inventory seperate from you.";
 		}
 
 		public static void Advance()
 		{
 			state++;
+
+			switch (state)
+			{
+				case 0:
+				case 1:
+					imagePath = "BidenMod/Assets/GUI/Biden2";
+					message = "Joe runs faster, but cannot jump as high as you can. Similar to how you can equip accessories to augment your movement, Joe can equip presidential policies which can help him get around.";
+					break;
+			}
 
 			if (state >= MAX_STATE)
 				Main.LocalPlayer.GetModPlayer<BidenTracker>().isBidenUnlocked = true;
