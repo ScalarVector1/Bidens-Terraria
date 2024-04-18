@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria.DataStructures;
 
-namespace StarlightRiver.Core.Systems.PlayableCharacterSystem
+namespace BidenMod.Core.Systems.PlayableCharacterSystem
 {
 	public abstract class PlayableCharacter
 	{

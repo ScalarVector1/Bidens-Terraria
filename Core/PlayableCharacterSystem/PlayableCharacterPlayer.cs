@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Terraria.DataStructures;
 using Terraria.ModLoader.IO;
 
-namespace StarlightRiver.Core.Systems.PlayableCharacterSystem
+namespace BidenMod.Core.Systems.PlayableCharacterSystem
 {
 	internal struct PlayableCharacterSlot
 	{
